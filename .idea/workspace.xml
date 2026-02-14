@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ce0d825-992c-4952-b1ff-b097ede40bc7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accommodation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Accommodation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfirmedSpeakers.html" beforeDir="false" afterPath="$PROJECT_DIR$/ConfirmedSpeakers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MathsConf.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Organisers.html" beforeDir="false" afterPath="$PROJECT_DIR$/Organisers.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
