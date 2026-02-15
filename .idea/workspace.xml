@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ce0d825-992c-4952-b1ff-b097ede40bc7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Accommodation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Accommodation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfirmedSpeakers.html" beforeDir="false" afterPath="$PROJECT_DIR$/ConfirmedSpeakers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Organisers.html" beforeDir="false" afterPath="$PROJECT_DIR$/Organisers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accommodation.html" beforeDir="false" afterPath="$PROJECT_DIR$/accommodation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brown White Modern University Admission Video .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfirmedSpeakers.html" beforeDir="false" afterPath="$PROJECT_DIR$/confirmedSpeakers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Organisers.html" beforeDir="false" afterPath="$PROJECT_DIR$/organisers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SUTemplateSkolemPage1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/USDesktop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/University Admission.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maroon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maroon2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maroon_mobile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +26,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
