@@ -28,13 +28,19 @@
       flex-direction: column;
       min-height: 100vh;
     }
+
     .content-grow {
-      flex: 1 0 auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 3rem;
     }
 
     .heading-primary {
       color: var(--primary);
       font-weight: 800;
+      font-size: 3rem;
     }
 
     .glass-card {
@@ -42,6 +48,38 @@
       backdrop-filter: blur(8px);
       border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 1.5rem;
+    }
+
+    .partner-logo {
+      max-height: 60px;
+      width: auto;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+      margin: 1px 2px;
+    }
+
+    .partner-logo:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    .partner-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary);
+      opacity: 0.8;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .partners-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
     }
 
     .speaker-item {
@@ -59,6 +97,7 @@
       transition: 0.3s;
       border: none;
     }
+
     .btn-maroon:hover {
       background-color: var(--accent);
       color: white;
@@ -81,7 +120,7 @@
     }
 
     .carousel-control-prev, .carousel-control-next {
-      width: 5%; /* Keeps arrows to the very edge */
+      width: 5%;
     }
 
     .carousel-control-prev-icon, .carousel-control-next-icon {
@@ -141,49 +180,55 @@
     </div>
   </nav>
 
-  <main class="content-grow d-flex align-items-center py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h1 class="heading-primary display-4 mb-2">STELLENBOSCH NUMBER THEORY CONFERENCE 2027</h1>
-        <h3 class="fw-bold" style="color: var(--accent);">18–22 JANUARY 2027</h3>
+  <main class="content-grow"> <div class="container">
+    <div class="text-center mb-4"> <h1 class="heading-primary mb-3" style="font-size: 3rem;">STELLENBOSCH NUMBER THEORY CONFERENCE 2027</h1>
+      <h5 class="fw-bold mb-3" style="color: var(--accent);">18–22 JANUARY 2027</h5>
+
+      <div class="mt-5">
+        <div class="partner-label">In collaboration with</div>
+        <div class="partners-container">
+          <a href="https://your-dynamics-link.com" target="_blank" rel="noopener noreferrer">
+            <img src="DynAMiCs_LOGO.png" alt="DynAMiCs" class="partner-logo">
+          </a>
+
+          <a href="https://erc.europa.eu" target="_blank" rel="noopener noreferrer">
+            <img src="ERC_logo.png" alt="ERC" class="partner-logo">
+          </a>
+        </div>
       </div>
+    </div>
 
-      <div class="row justify-content-center">
-        <div class="col-xl-10">
-          <div class="glass-card p-4 p-md-3 shadow-sm">
-            <div class="row g-4 g-md-3">
-              <div class="col-md-7 border-md-end">
-                <h5 class="fw-bold text-uppercase mb-3" style="color: var(--primary);">Purpose</h5>
-                <p class="fs-6 mb-0">
-                  The Stellenbosch Number Theory conference is held every two years to attract
-                  international experts to South Africa to enrich our research and postgraduate experiences.
-                  The theme is broadly around number theory and arithmetic geometry, but does not have
-                  a narrow focus on any specific area. Often we have talks on a variety of topics ranging
-                  from elliptic curves to modular forms to function field arithmetic to rational
-                  points on varieties to model theoretic approaches and more.
-                </p>
-              </div>
-              <div class="col-md-5">
-                <h5 class="fw-bold text-uppercase mb-3" style="color: var(--primary);">Funding</h5>
-                <p>We may be able to assist in a limited capacity with accommodation and maybe flights.
-                  If you would like us to consider you for funding, please let us know.</p>
-                <div class="p-3 rounded-3 mb-4" style="background: rgba(183, 153, 98, 0.1);">
-                  <small class="d-block fw-bold text-muted">Deadline:</small>
-                  <span class="fw-bold text-dark">1 October 2026</span>
-                </div>
-              </div>
+    <div class="row justify-content-center">
+      <div class="col-xl-10">
+        <div class="glass-card p-3 shadow-sm"> <div class="row g-4 g-m-3">
+          <div class="col-md-7 border-md-end">
+            <h6 class="fw-bold text-uppercase mb-2" style="color: var(--primary);">Purpose</h6>
+            <p class="small mb-0">
+              The Stellenbosch Number Theory conference is held every two years to attract international experts to South Africa
+              to enrich our research and postgraduate experiences. The theme is broadly around number theory and arithmetic geometry,
+              but does not have a narrow focus on any specific area. Often we have talks on a variety of topics ranging from elliptic
+              curves to modular forms to function field arithmetic to rational points on varieties to model theoretic approaches and more.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <h6 class="fw-bold text-uppercase mb-2" style="color: var(--primary);">Funding</h6>
+            <p class="small mb-2">We may be able to assist in a limited capacity with accommodation and flights.</p>
+            <div class="p-2 rounded-3" style="background: rgba(183, 153, 98, 0.1);">
+              <small class="d-block fw-bold text-muted">Deadline: 1 October 2026</small>
             </div>
+          </div>
+        </div>
 
-            <div class="text-center mt-5 pt-4 border-top">
-              <p class="mb-0 small fw-bold text-muted">Inquiries:</p>
-              <a href="mailto:naina@sun.ac.za" class="fw-bold text-decoration-none" style="color: var(--primary); font-size: 1.1rem;">
-                naina@sun.ac.za
-              </a>
-            </div>
+          <div class="text-center mt-3 pt-2 border-top">
+            <span class="small fw-bold text-muted">Inquiries:</span>
+            <a href="mailto:naina@sun.ac.za" class="fw-bold text-decoration-none ms-2" style="color: var(--primary); font-size: 0.95rem;">
+              naina@sun.ac.za
+            </a>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </main>
 
   <footer class="py-3" style="background: var(--primary); color: white;">
