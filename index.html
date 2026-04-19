@@ -168,7 +168,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item"><a class="nav-link px-3 active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="confirmedSpeakers.html">Participants</a></li>
+<!--          <li class="nav-item"><a class="nav-link px-3" href="confirmedSpeakers.html">Participants</a></li>-->
           <li class="nav-item"><a class="nav-link px-3" href="accommodation.html">Accommodation</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="organisers.html">Organisers</a></li>
         </ul>
@@ -231,77 +231,75 @@
   </div>
   </main>
 
-  <footer class="py-3" style="background: var(--primary); color: white;">
-    <div class="container">
-      <div class="row align-items-center mb-3">
-        <div class="col-sm-6 text-center text-sm-start">
-          <h4 class="mb-0 fw-bold">Confirmed Participants</h4>
-        </div>
-        <div class="col-sm-6 text-center text-sm-end mt-2 mt-sm-0">
-          <a href="confirmedSpeakers.html" class="text-decoration-none" style="color: var(--accent); font-weight: 600;">View All participants ↗</a>
-        </div>
-      </div>
+<!--  <footer class="py-3" style="background: var(&#45;&#45;primary); color: white;">-->
+<!--    <div class="container">-->
+<!--      <div class="row align-items-center mb-3">-->
+<!--        <div class="col-sm-6 text-center text-sm-start">-->
+<!--          <h4 class="mb-0 fw-bold">Confirmed Participants</h4>-->
+<!--        </div>-->
+<!--        <div class="col-sm-6 text-center text-sm-end mt-2 mt-sm-0">-->
+<!--          <a href="confirmedSpeakers.html" class="text-decoration-none" style="color: var(&#45;&#45;accent); font-weight: 600;">View All participants ↗</a>-->
+<!--        </div>-->
+<!--      </div>-->
 
-      <div id="speakerCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner" id="speaker-list">
-          <div class="col text-center w-100 text-white-50">Loading participants...</div>
-        </div>
+<!--      <div id="speakerCarousel" class="carousel slide" data-bs-ride="carousel">-->
+<!--        <div class="carousel-inner" id="speaker-list">-->
+<!--          <div class="col text-center w-100 text-white-50">Loading participants...</div>-->
+<!--        </div>-->
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#speakerCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#speakerCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
-        </button>
-      </div>
-    </div>
-  </footer>
+<!--        <button class="carousel-control-prev" type="button" data-bs-target="#speakerCarousel" data-bs-slide="prev">-->
+<!--          <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>-->
+<!--        </button>-->
+<!--        <button class="carousel-control-next" type="button" data-bs-target="#speakerCarousel" data-bs-slide="next">-->
+<!--          <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </footer>-->
 
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  const webAppUrl = "https://script.google.com/macros/s/AKfycbyjftJJB2W0EIfzWwNDWoHdSakBXXbLJq_3WT_WXEw1JO-xhqc0KKWNu99QnZkpuyNP/exec";
+<!--<script>-->
+<!--  const webAppUrl = "https://script.google.com/macros/s/AKfycbyjftJJB2W0EIfzWwNDWoHdSakBXXbLJq_3WT_WXEw1JO-xhqc0KKWNu99QnZkpuyNP/exec";-->
 
-  async function loadSpeakers() {
-    const container = document.getElementById("speaker-list");
-    try {
-      const response = await fetch(webAppUrl);
-      let data = await response.json();
-      container.innerHTML = "";
+<!--  async function loadSpeakers() {-->
+<!--    const container = document.getElementById("speaker-list");-->
+<!--    try {-->
+<!--      const response = await fetch(webAppUrl);-->
+<!--      let data = await response.json();-->
+<!--      container.innerHTML = "";-->
 
-      data.sort((a, b) => a.name.localeCompare(b.name));
+<!--      data.sort((a, b) => a.name.localeCompare(b.name));-->
 
-      // We will group speakers: 3 per slide for desktop, 1 per slide for mobile is handled by Bootstrap grid inside
-      // But for a true "slideshow" feel, let's do 1 slide per speaker or small groups.
-      // Here, we create a slide for every 3 speakers.
-      for (let i = 0; i < data.length; i += 3) {
-        const chunk = data.slice(i, i + 3);
-        const carouselItem = document.createElement("div");
-        carouselItem.className = `carousel-item ${i === 0 ? 'active' : ''}`;
+<!--      // We will group speakers: 3 per slide for desktop, 1 per slide for mobile is handled by Bootstrap grid inside-->
+<!--      for (let i = 0; i < data.length; i += 3) {-->
+<!--        const chunk = data.slice(i, i + 3);-->
+<!--        const carouselItem = document.createElement("div");-->
+<!--        carouselItem.className = `carousel-item ${i === 0 ? 'active' : ''}`;-->
 
-        // Use a row inside the slide to keep your 3-column desktop layout
-        let innerHTML = `<div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center px-5">`;
+<!--        // Use a row inside the slide to keep your 3-column desktop layout-->
+<!--        let innerHTML = `<div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center px-5">`;-->
 
-        chunk.forEach(person => {
-          innerHTML += `
-            <div class="col">
-              <div class="speaker-item text-start">
-                <div class="fw-bold" style="color: var(--accent);">${person.name}</div>
-                <div class="small text-white-50">${person.affiliation}</div>
-              </div>
-            </div>`;
-        });
+<!--        chunk.forEach(person => {-->
+<!--          innerHTML += `-->
+<!--            <div class="col">-->
+<!--              <div class="speaker-item text-start">-->
+<!--                <div class="fw-bold" style="color: var(&#45;&#45;accent);">${person.name}</div>-->
+<!--                <div class="small text-white-50">${person.affiliation}</div>-->
+<!--              </div>-->
+<!--            </div>`;-->
+<!--        });-->
 
-        innerHTML += `</div>`;
-        carouselItem.innerHTML = innerHTML;
-        container.appendChild(carouselItem);
-      }
-    } catch (error) {
-      container.innerHTML = "<div class='text-center w-100'>Error loading participants.</div>";
-    }
-  }
-  loadSpeakers();
-</script>
+<!--        innerHTML += `</div>`;-->
+<!--        carouselItem.innerHTML = innerHTML;-->
+<!--        container.appendChild(carouselItem);-->
+<!--      }-->
+<!--    } catch (error) {-->
+<!--      container.innerHTML = "<div class='text-center w-100'>Error loading participants.</div>";-->
+<!--    }-->
+<!--  }-->
+<!--  loadSpeakers();-->
+<!--</script>-->
 </body>
 </html>
