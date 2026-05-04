@@ -155,60 +155,60 @@
         <th>Affiliation</th>
       </tr>
       </thead>
-<!--      <tbody>-->
-<!--      <tr id="loadingRow">-->
-<!--        <td colspan="2" class="text-center text-muted py-5">-->
-<!--          <div class="spinner-border spinner-border-sm me-2" role="status"></div>-->
-<!--          Loading participants from Registry...-->
-<!--        </td>-->
-<!--      </tr>-->
-<!--      </tbody>-->
+      <tbody>
+      <tr id="loadingRow">
+        <td colspan="2" class="text-center text-muted py-5">
+          <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+          Loading participants from Registry...
+        </td>
+      </tr>
+      </tbody>
     </table>
   </div>
 </div>
 
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
-<!--<script>-->
-<!--  const webAppUrl = "https://script.google.com/macros/s/AKfycbyjftJJB2W0EIfzWwNDWoHdSakBXXbLJq_3WT_WXEw1JO-xhqc0KKWNu99QnZkpuyNP/exec";-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const webAppUrl = "https://script.google.com/macros/s/AKfycbyjftJJB2W0EIfzWwNDWoHdSakBXXbLJq_3WT_WXEw1JO-xhqc0KKWNu99QnZkpuyNP/exec";
 
-<!--  async function loadSpeakersTable() {-->
-<!--    const tableBody = document.querySelector("#speakersTable tbody");-->
+  async function loadSpeakersTable() {
+    const tableBody = document.querySelector("#speakersTable tbody");
 
-<!--    try {-->
-<!--      const response = await fetch(webAppUrl);-->
-<!--      const data = await response.json();-->
+    try {
+      const response = await fetch(webAppUrl);
+      const data = await response.json();
 
-<!--      const loadingRow = document.getElementById("loadingRow");-->
-<!--      if (loadingRow) loadingRow.remove();-->
+      const loadingRow = document.getElementById("loadingRow");
+      if (loadingRow) loadingRow.remove();
 
-<!--      if (!data.length) {-->
-<!--        tableBody.innerHTML = `<tr><td colspan="2" class="text-center text-muted py-4">No confirmed participants yet.</td></tr>`;-->
-<!--        return;-->
-<!--      }-->
+      if (!data.length) {
+        tableBody.innerHTML = `<tr><td colspan="2" class="text-center text-muted py-4">No confirmed participants yet.</td></tr>`;
+        return;
+      }
 
-<!--      // Sort Alphabetically-->
-<!--      data.sort((a, b) => a.name.localeCompare(b.name));-->
+      // Sort Alphabetically
+      data.sort((a, b) => a.name.localeCompare(b.name));
 
-<!--      const fragment = document.createDocumentFragment();-->
-<!--      data.forEach(speaker => {-->
-<!--        const row = document.createElement("tr");-->
-<!--        row.innerHTML = `-->
-<!--          <td class="fw-bold" style="color: var(&#45;&#45;primary);">${speaker.name}</td>-->
-<!--          <td>${speaker.affiliation}</td>-->
-<!--        `;-->
-<!--        fragment.appendChild(row);-->
-<!--      });-->
+      const fragment = document.createDocumentFragment();
+      data.forEach(speaker => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td class="fw-bold" style="color: var(--primary);">${speaker.name}</td>
+          <td>${speaker.affiliation}</td>
+        `;
+        fragment.appendChild(row);
+      });
 
-<!--      tableBody.appendChild(fragment);-->
+      tableBody.appendChild(fragment);
 
-<!--    } catch (error) {-->
-<!--      console.error("Error loading speakers:", error);-->
-<!--      tableBody.innerHTML = `<tr><td colspan="2" class="text-center text-danger py-4">Failed to load data. Please refresh.</td></tr>`;-->
-<!--    }-->
-<!--  }-->
+    } catch (error) {
+      console.error("Error loading speakers:", error);
+      tableBody.innerHTML = `<tr><td colspan="2" class="text-center text-danger py-4">Failed to load data. Please refresh.</td></tr>`;
+    }
+  }
 
-<!--  document.addEventListener("DOMContentLoaded", loadSpeakersTable);-->
-<!--</script>-->
+  document.addEventListener("DOMContentLoaded", loadSpeakersTable);
+</script>
 
 </body>
 </html>
